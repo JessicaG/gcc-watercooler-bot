@@ -9,7 +9,7 @@ class WaterCoolerBot < SlackRubyBot::Bot
     client.say(channel: data.channel, text: "The weather in #{match[:location]} is glorious.")
   end
 
-  match /^(?<word>\w*)\$/ do |client, data, match|
+  match /^(<word>\w*)\$/ do |client, data, match|
     client.say(channel: data.channel, text: "Of course, there must be #{match[:word]}", gif: :word)
   end
 
@@ -18,7 +18,7 @@ class WaterCoolerBot < SlackRubyBot::Bot
   end
 
   match /^potato$/ do |client, data, match|
-    client.say(channel: data.channel, text: "Developer Duck to the rescue!", gif: 'musical duck')
+    client.say(channel: data.channel, text: "Developer Duck to the rescue!", gif: 'duck music')
   end
 
   def self.millenial_responses
