@@ -10,7 +10,7 @@ class WaterCoolerBot < SlackRubyBot::Bot
   end
 
   match /^(?<word>\w*)\?$/ do |client, data, match|
-    client.say(channel: data.channel, text: "Of course, there must be #{match[:word]}". gif: :word)
+    client.say(channel: data.channel, text: "Of course, there must be #{match[:word]}", gif: :word)
   end
 
   match /^millenial$/ do |client, data, match|
