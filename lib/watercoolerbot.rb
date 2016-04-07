@@ -14,7 +14,7 @@ class WaterCoolerBot < SlackRubyBot::Bot
   end
 
   match /^millenial$/ do |client, data, match|
-    client.say(channel: data.channel, text: millenial_responses, image: 'https://scontent.fsnc1-1.fna.fbcdn.net/hphotos-xpf1/l/t31.0-8/12967308_1068280473252357_6081231978689125756_o.jpg')
+    client.say(channel: data.channel, text: millenial_responses, image_url: '../img/zoom_jw.png')
   end
 
   match /^potato$/ do |client, data, match|
