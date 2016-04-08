@@ -20,6 +20,11 @@ class WaterCoolerBot < SlackRubyBot::Bot
   match /^potato$/ do |client, data, match|
     client.say(channel: data.channel, text: "Developer Duck to the rescue!", gif: 'duck flock')
   end
+  
+  match /^james brown$/ do |client, data, match|
+    client.say(channel: data.channel, text: "Smooth, smooth @jamesbrown", gif: 'james brown')
+  end
+
 
   def self.millenial_responses
   	["That is on fleek", "I cannot even", "Sorry, not sorry","SO MUCH JOMO RIGHT NOW", "With you hundo P", "Stop phubbing me","JK I still love ya", "This is so perf", "The struggle is real", "Struggle is V real"].sample
