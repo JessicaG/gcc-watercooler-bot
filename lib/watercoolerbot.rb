@@ -13,15 +13,15 @@ class WaterCoolerBot < SlackRubyBot::Bot
     client.say(channel: data.channel, text: "Of course, there must be #{match[:word]}", gif: :word)
   end
 
-  match /^millenial$/ do |client, data, match|
+  scan /^millenial$/ do |client, data|
     client.say(channel: data.channel, text: millenial_responses, image_url: '../img/zoom_jw.png')
   end
 
-  match /^potato$/ do |client, data, match|
+  scan /^potato$/ do |client, data|
     client.say(channel: data.channel, text: "Developer Duck to the rescue!", gif: 'duck flock')
   end
   
-  match /^james brown$/ do |client, data, match|
+  scan /^james brown$/ do |client, data|
     client.say(channel: data.channel, text: "Smooth, smooth @jamesbrown", gif: 'james brown')
   end
 
