@@ -13,22 +13,37 @@ class WaterCoolerBot < SlackRubyBot::Bot
     client.say(channel: data.channel, text: "Of course, there must be #{match[:word]}", gif: :word)
   end
 
-  scan /^millenial$/ do |client, data|
+  match /^millenial$/ do |client, data|
     client.say(channel: data.channel, text: millenial_responses, image_url: '../img/zoom_jw.png')
   end
 
-  scan /^potato$/ do |client, data|
+  match /^potato$/ do |client, data|
     client.say(channel: data.channel, text: "Developer Duck to the rescue!", gif: 'duck flock')
   end
   
-  scan /^james brown$/ do |client, data|
-    client.say(channel: data.channel, text: "Smooth, smooth @jamesbrown", gif: 'james brown')
+  match /^james brown$/ do |client, data|
+    client.say(channel: data.channel, text: "Smooth, smooth #{@jamesbrown}", gif: 'james brown')
   end
 
+  match /^elaine$/.downcase do |client, data|
+    client.say(channel: data.channel, text: elaine_responses, gif: 'scolding mom')
+  end
+
+  scan /^rehan$/.downcase do |client, data|
+    client.say(channel: data.channel, text: rehan_responses, gif: 'charming man')
+  end
 
   def self.millenial_responses
   	["That is on fleek", "I cannot even", "Sorry, not sorry","SO MUCH JOMO RIGHT NOW", "With you hundo P", "Stop phubbing me","JK I still love ya", "This is so perf", "The struggle is real", "Struggle is V real"].sample
   end
+
+  def self.elaine_responses
+    ["Now kids, let's move this out of the #{#watercooler}", "They are hippies in people's republic", "But is it compostable? #{:scream:}", "NICE", "Aww, LOVE BURST!", "#nerds" ].sample
+  end
+
+  def self.rehan_responses
+    ["I'm gonna need you take that down", "You just made my day", "This IS casual Rehan"].sample
+  end 
 
 end
 
