@@ -38,7 +38,7 @@ class WaterCoolerBot < SlackRubyBot::Bot
   end
 
   def self.elaine_responses
-    ["Now kids, let's move this out of the #{watercooler}", "They are hippies in people's republic", "But is it compostable? #{:scream:}", "NICE", "Aww, LOVE BURST!", "#nerds" ].sample
+  ["test"]#   ["Now kids, let's move this out of the #{watercooler}", "They are hippies in people's republic", "But is it compostable? #{:scream:}", "NICE", "Aww, LOVE BURST!", "#nerds" ].sample
   end
 
   def self.rehan_responses
