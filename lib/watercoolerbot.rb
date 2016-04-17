@@ -34,11 +34,11 @@ class WaterCoolerBot < SlackRubyBot::Bot
   end
 
   def self.millenial_responses
-  	["That is on fleek", "I cannot even", "Sorry, not sorry","SO MUCH JOMO RIGHT NOW", "With you hundo P", "Stop phubbing me","JK I still love ya", "This is so perf", "The struggle is real", "Struggle is V real"].sample
+  	["That is on fleek", "I cannot even", "Sorry, not sorry","SO MUCH JOMO RIGHT NOW", "With you hundo P", "Stop phubbing me", "JK I still love ya", "This is so perf", "The struggle is real", "Struggle is V real"].sample
   end
 
   def self.elaine_responses
-    ["Now kids, let's move this out of the #watercooler", "They are hippies in people's republic", "But is it compostable? :scream:", "NICE", "Aww, LOVE BURST!", "#nerds", "Please, no more eating children" ].sample
+    ["Now kids, let's move this out of the watercooler", "They are hippies in people's republic", "But is it compostable? :scream:", "NICE", "Aww, LOVE BURST!", "#nerds", "Please, no more eating children" ].sample
   end
 
   def self.rehan_responses
