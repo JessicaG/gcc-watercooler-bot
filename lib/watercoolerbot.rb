@@ -13,7 +13,7 @@ class WaterCoolerBot < SlackRubyBot::Bot
     client.say(channel: data.channel, text: "Of course, there must be #{match[:word]}", gif: :word)
   end
 
-  match /^millenial$/ do |client, data|
+  match /^millennial$/ do |client, data|
     client.say(channel: data.channel, text: millenial_responses, image_url: '../img/zoom_jw.png')
   end
 
@@ -26,7 +26,7 @@ class WaterCoolerBot < SlackRubyBot::Bot
   end
 
   match /^elaine$/ do |client, data|
-    client.say(channel: data.channel, text: elaine_responses, gif: 'scolding mom')
+    client.say(channel: data.channel, text: elaine_responses, gif: 'den mom')
   end
 
   match /^rehan$/ do |client, data|
