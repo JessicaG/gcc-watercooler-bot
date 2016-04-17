@@ -25,11 +25,11 @@ class WaterCoolerBot < SlackRubyBot::Bot
     client.say(channel: data.channel, text: "Smooth, smooth #{@jamesbrown}", gif: 'james brown')
   end
 
-  match /^elaine$/.downcase do |client, data|
+  match /^elaine$/ do |client, data|
     client.say(channel: data.channel, text: elaine_responses, gif: 'scolding mom')
   end
 
-  scan /^rehan$/.downcase do |client, data|
+  match /^rehan$/ do |client, data|
     client.say(channel: data.channel, text: rehan_responses, gif: 'charming man')
   end
 
@@ -38,7 +38,7 @@ class WaterCoolerBot < SlackRubyBot::Bot
   end
 
   def self.elaine_responses
-    ["Now kids, let's move this out of the #{#watercooler}", "They are hippies in people's republic", "But is it compostable? #{:scream:}", "NICE", "Aww, LOVE BURST!", "#nerds" ].sample
+    ["Now kids, let's move this out of the #{watercooler}", "They are hippies in people's republic", "But is it compostable? #{:scream:}", "NICE", "Aww, LOVE BURST!", "#nerds" ].sample
   end
 
   def self.rehan_responses
